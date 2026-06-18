@@ -1,0 +1,5 @@
+let preco = 100
+let desconto = 0.10
+let precoNovo =  preco - (preco * desconto) 
+console.log(`O desconto é de R$${preco * desconto}`);
+console.log(`O Preço novo é de R$${precoNovo}`);
