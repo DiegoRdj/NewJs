@@ -3,7 +3,6 @@ const iniciar = document.querySelector('.iniciar')
 const pausar = document.querySelector('.pausar')
 const zerar = document.querySelector('.zerar')
 
-let data = new Date();
 let dataInicial;
 let clock
 let format

@@ -14,10 +14,11 @@ function retornaHora(data) {
 }
 
 try {
+    
     const data = new Date ('01-01-1970 12:32:32')
     const hora = retornaHora(data);
     console.log(hora);
-    
+
 } catch (error) {
     // tratar erro
 }

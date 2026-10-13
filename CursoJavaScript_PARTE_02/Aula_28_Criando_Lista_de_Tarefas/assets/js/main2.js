@@ -10,7 +10,7 @@ function criaLi() {
 function limpaInput() {
     inputTarefa.value = ""
     inputTarefa.focus() //evento de html q coloca o cursor la
-}
+} 
 
 function criaBotaoApagar(li) {
     li.innerText += " "
@@ -36,7 +36,7 @@ inputTarefa.addEventListener('keypress', function (e) {
         criaTarefa(inputTarefa.value) //Pegando o valor do input
 
     }
-
+w
 }) //Para pegar o pressionar da tecla
 
 btnTarefa.addEventListener('click', function (e) {
@@ -46,10 +46,10 @@ btnTarefa.addEventListener('click', function (e) {
 });
 
 document.addEventListener('click', function(e){
-    const el = e.target;
+    const el = e.target ;
 
-    if (el.classList.contains('apagar')) { //checa se o elemento contem a classe apagar
-        el.parentElement.remove() //pai dele sera removido, logo ele tambem é removido     
+    if (el.classList.contains('apagar')) { 
+        el.parentElement.remove()      
         salvarTarefa()
     }
 });
@@ -60,11 +60,11 @@ function salvarTarefa() {
 
     for (let tarefa of liTarefas) {
         let tarefaTexto = tarefa.innerText;
-        tarefaTexto = tarefaTexto.replace('Apagar', '').trim() // muda o apagar para nada, trim tira o espaço
+        tarefaTexto = tarefaTexto.replace('Apagar', '').trim() 
         listaDeTarefas.push(tarefaTexto)  
     }
-    const tarefasJSON = JSON.stringify(listaDeTarefas) //converteu para JSON em String
-    localStorage.setItem('tarefas', tarefasJSON) //so pode salvar Strings, por isso passou de JSON
+    const tarefasJSON = JSON.stringify(listaDeTarefas) 
+    localStorage.setItem('tarefas', tarefasJSON) 
     
 }
 
